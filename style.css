@@ -1,0 +1,28 @@
+.firstLine {
+    height: 2px;
+    width: 50px;
+    background-color: rgb(10, 177, 10);
+}
+
+.middleLine {
+    background-color: yellow;
+    height: 2px;
+    width: 50px;
+    rotate: 45px;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -17px;
+    left: -10px;
+}
+
+.verticalLine {
+    background-color: green;
+    height: 50px;
+    width: 2px;
+}
+
+.horiLine {
+    background-color: green;
+    width: 25px;
+    height: 2px;
+}

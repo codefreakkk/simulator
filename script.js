@@ -47,8 +47,6 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     let id = document.getElementById(data).id;
 
-    let battery1 = 0;
-    let battery2 = 0;
 
     if (id == "relay") {
         let relay_cont = document.getElementsByClassName("r1");
@@ -79,16 +77,16 @@ function drop(event) {
 
     const wire4 = document.getElementById("wire4")
     wire4.onmouseenter = function () {
-       if(id == "battery") {
-        Array.from(b2, (ele) => {
-            ele.style.display = "block"
-        })
-       }
+        if (id == "battery") {
+            Array.from(b2, (ele) => {
+                ele.style.display = "block"
+            })
+        }
     }
 
     const wire3 = document.getElementById("wire3")
     wire3.onmouseenter = function () {
-        if(id == "battery") {
+        if (id == "battery") {
             Array.from(b1, (ele) => {
                 ele.style.display = "block"
             })
@@ -97,15 +95,43 @@ function drop(event) {
 
     const wire2 = document.getElementById("wire2")
     wire2.onmouseenter = function () {
-        if(id == "wire_is_here") {
-            wire2_line.style.display = "block"   
-        }    
+        if (id == "wire_is_here") {
+            wire2_line.style.display = "block"
+        }
     }
 
     const wire1 = document.getElementById("wire1")
     wire1.onmouseenter = function () {
-        if(id == "wire_is_here") {
-            wireline1.style.display = "block"   
-        }    
+        if (id == "wire_is_here") {
+            wireline1.style.display = "block"
+        }
+    }
+}
+
+let start = 0;
+
+function startC() {
+    let middleLine1 = document.getElementById("abc");
+    if (start == 0) {
+        start = 1;
+        const relay_toggle = document.getElementById("relay_toggle");
+        relay_toggle.style.transform = "rotate(15deg)"
+        relay_toggle.style.position = "relative"
+        relay_toggle.style.left = "-15px"
+        middleLine1.style.transform = "rotate(0deg)";
+        middleLine1.style.position = "relative"
+        middleLine1.style.top = 0;
+        middleLine1.style.left = 0;
+        
+    } else {
+        start = 0;
+        const relay_toggle = document.getElementById("relay_toggle");
+        relay_toggle.style.transform = "rotate(0deg)"
+        relay_toggle.style.position = "relative"
+        relay_toggle.style.left = "-5px"
+        middleLine1.style.transform = "rotate(-45deg)"
+        middleLine1.style.position = "relative"
+        middleLine1.style.top = "-14px";
+        middleLine1.style.left = "-6px";
     }
 }

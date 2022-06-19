@@ -4,6 +4,19 @@
     background-color: rgb(10, 177, 10);
 }
 
+.firstLine1 {
+    height: 4px;
+    width: 150px;
+    z-index: 100;
+    background-color: rgb(10, 177, 10);
+}
+
+.switch_cont {
+    position: relative;
+    left: 18px;
+    top:20px;
+}
+
 .middleLine {
     background-color: yellow;
     height: 2px;
@@ -15,14 +28,307 @@
     left: -10px;
 }
 
+
+.middleLine1 {
+    background-color: yellow;
+    height: 5px;
+    width: 50px;
+    rotate: 45px;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -14px;
+    left: -6px;
+}
+
 .verticalLine {
     background-color: green;
     height: 50px;
     width: 2px;
 }
 
+.verticalLine1 {
+    background-color: green;
+    height: 120px;
+    width: 3px;
+}
+
+.verticalLine2 {
+    background-color: green;
+    height: 130px;
+    z-index: 100;
+    width: 3px;
+}
+
 .horiLine {
     background-color: green;
     width: 25px;
     height: 2px;
+}
+
+.horiLine1 {
+    background-color: green;
+    width: 25px;
+    height: 2px;
+}
+
+
+#battery_cont {
+    /* background-color: rgb(254, 254, 254); */
+    /* background-color:aquamarine; */
+    /* border: 1px solid red; */
+    background-color:whitesmoke;
+    height: 30vh;
+    width: 5vh;
+    position : relative;
+    top: 120px;
+    left: 50px;
+}
+
+#switch1 {
+    /* background-color:aquamarine; */
+    /* border: 1px solid red; */
+    background-color:whitesmoke;
+    width: 30vh;
+    height: 5vh;
+    position: relative;
+    top: 120px;
+    left: 50px;
+}
+
+#wire1 {
+    /* background-color:aquamarine; */
+    /* border: 1px solid red; */
+    background-color:whitesmoke;
+    height: 5vh;
+    width: 30vh;
+    position : relative;
+    top: 120px;
+    left: 50px; 
+}
+
+#relay1 {
+    /* background-color:red; */
+    /* border: 1px solid red; */
+    background-color:whitesmoke;
+    width: 15vh;
+    height: 40vh;
+    position : relative;
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+    top: -182px;
+    left: 265px; 
+}
+
+
+.relay_box {
+    border: 3px solid gray;
+    height: 75px;
+    width: 85px;
+    position: relative;
+    top: 110px;
+    left: 10px;
+}
+
+.relay_lin1 {
+    background-color: gray;
+    width: 4px;
+    position: relative;
+    height: 100px;
+    left: 25px;
+    top: 21px;
+    z-index: 10;
+}
+.relay_lin2 {
+    background-color: gray;
+    width: 4px;
+    position: absolute;
+    
+    height: 108px;
+    left: 25px;
+    top: 175px;
+}
+.relay_lin3 {
+    background-color: gray;
+    width: 4px;
+    position: absolute;
+    height: 100px;
+    left: 83px;
+    top: 21px;
+}
+
+.relay_lin4 {
+    background-color: gray;
+    width: 4px;
+    position: absolute;
+    height: 117px;
+    left: 83px;
+    z-index: 100;
+    top: 175px;
+}
+
+.relay_lin5 {
+    background-color: gray;
+    width: 4px;
+    position: absolute;
+    height: 212px;
+    left: 65px;
+    top: 175px;
+}
+
+.relay_lin6 {
+    background-color: yellow;
+    width: 4px;
+    position: absolute;
+    height: 60px;
+    left: 83px;
+    top: 118px;
+}
+
+
+#wire2 {
+    /* border: 1px solid rgb(182, 181, 181); */
+    background-color:whitesmoke;
+    height: 5vh;
+    width: 30vh;
+    position: relative;
+    top: 160px;
+    left: 375px;
+  
+}
+
+#wire3 {
+    /* border: 1px solid red; */
+    background-color:whitesmoke;
+    height: 5vh;
+    width: 37vh;
+    position: relative;
+    top: 600px;
+    left:325px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#wire4 {
+    /* border:1px solid red; */
+    background-color:whitesmoke;
+    height: 5vh;
+    width: 33vh;
+    position: relative;
+    top: 470px;
+    z-index: 1;
+    left:340px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#wire5 {
+    /* border : 1px solid red; */
+    background-color:whitesmoke;
+    width: 10vh;
+    height: 40vh;
+    position : relative;
+    top: 575px;
+    left: 525px; 
+}
+
+.wireline1 {
+    background-color: gray;
+    width: 225px;
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    height: 4px;
+    z-index: 100;
+}
+
+.battery_line1 {
+    background-color: green;
+    height: 4px;
+    width: 90px;
+    z-index: 100;
+    position: relative;
+    left: 9px;
+    /* top: 15px; */
+}
+.battery_line2 {
+    background-color: green;
+    width: 4px;
+    height: 100%;
+
+    position: relative;
+    left: 10px;
+    /* top: -3px; */
+}
+.battery_line22 {
+    background-color: green;
+    width: 4px;
+    height: 100%;
+
+    position: relative;
+    left: 20px;
+    /* top: -3px; */
+}
+
+.battery_line3 {
+    background-color: green;
+    width: 4px;
+    height: 70%;
+    position: absolute;
+    left: 110px;
+}
+
+.battery_line33 {
+    background-color: green;
+    width: 4px;
+    height: 70%;
+    position: absolute;
+    left: 100px;
+}
+
+.battery_line4 {
+    background-color: green;
+    height: 4px;
+    width: 100px;
+    position: relative;
+    left: 20px;
+}
+
+.battery_line44 {
+    background-color: green;
+    height: 4px;
+    width: 115px;
+    position: relative;
+    left: 20px;
+}
+
+.wire5_line1 {
+    background-color: green;
+    height: 361px;
+    width: 4px;
+    position: relative;
+    top: -15px;
+    left: 27px;
+    z-index: 100;
+}
+
+.wire2_line {
+    background-color: green;
+    width: 205px;
+    left: -27px;
+    position: relative;
+    top: 20px;
+    height: 4px;
+    z-index: 100;
+}
+
+#motor_png {
+    position: absolute;
+    top: 80px;
+    left: -28px;
 }

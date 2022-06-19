@@ -81,50 +81,63 @@
                     <!-- Relay -->
                     <li class="menu-item mt-2" style="display: flex; align-items: center;">
                         <a href="admin.php" class="menu-link">
-                            <!-- <i class="menu-icon tf-icons bx bx-home-circle"></i> -->
                             <div>
-                                <img src="relay.png" height="100" alt="" srcset="">
+                                <img src="relay.png" id="relay" draggable="true" ondragstart="drag(event)" height="100"
+                                    alt="" srcset="">
                             </div>
                         </a>
                     </li>
                     <div data-i18n="Layouts mt-2" style="color:#2d0480;"><b>Relay</b></div>
 
-                                       <!-- Motor -->
+                    <!-- Motor -->
                     <li class="menu-item mt-3" style="display: flex; align-items: center;">
                         <a class="menu-link">
                             <!-- <i class="menu-icon tf-icons bx bx-home-circle"></i> -->
                             <div>
-                                <img src="motor.png" height="100" alt="" srcset="">
+                                <img src="motor.png" id="motor" height="100" alt="" srcset="" draggable="true"
+                                    ondragstart="drag(event)" id="motor">
                             </div>
                         </a>
                     </li>
                     <div data-i18n="Layouts mt-2" style="color:#2d0480;"><b>Motor</b></div>
 
                     <!-- Switch -->
-                    <li class="menu-item mt-4" style="display: flex;  align-items: center;">
+                    <li class="menu-item mt-4" style="display: flex;  align-items: center;" draggable="true"
+                        ondragstart="drag(event)" id="switch">
                         <a class="menu-link">
                             <div style="display: flex; align-items: center; padding: 6vh 0;">
                                 <div class="firstLine"></div>
                                 <div class="middleLine"></div>
                                 <div class="firstLine"></div>
-                            
+
                             </div>
                         </a>
                     </li>
                     <div data-i18n="Layouts mt-2" style="color:#2d0480;"><b>Switch</b></div>
 
-                    <li class="menu-item mt-4" style="display: flex;  align-items: center;">
+                    <li class="menu-item mt-4" style="display: flex;  align-items: center;" draggable="true"
+                    ondragstart="drag(event)" id="battery">
                         <a class="menu-link">
                             <div style="display: flex; flex-direction: column; align-items: center; padding: 6vh 0;">
                                 <div class="verticalLine"></div>
                                 <div class="horiLine" style="height:3px;width: 35px;"></div>
                                 <div class="horiLine mt-1" style="height:3.5px;width: 25px;"></div>
-                         
                                 <div class="verticalLine"></div>
                             </div>
                         </a>
                     </li>
                     <div data-i18n="Layouts mt-2" style="color:#2d0480;"><b>Battery</b></div>
+                    
+                    <li class="menu-item mt-4" id="wire_is_here" style="display: flex;  align-items: center;" draggable="true"
+                    ondragstart="drag(event)">
+                        <a class="menu-link">
+                            <div style="display: flex; flex-direction: column; align-items: center; padding: 6vh 0;">
+                              
+                                <div class="verticalLine"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <div data-i18n="Layouts mt-2" style="color:#2d0480;"><b>Wire</b></div>
 
                 </ul>
             </aside>
@@ -135,10 +148,79 @@
 
                 <h2 style="width:75%; margin-top: 5vh; margin-left:5vh;">Circuit Simulator</h2>
 
-                <div class="row" style="width:90%; margin-top: 3vh; display: flex; align-items: center; justify-content: center; margin-left:3vh;">
-                    <div class="col-lg-8 mb-4 order-0" style="background-color: white; height:80vh;border-radius: 10px;">
+                <div class="row"
+                    style="width:90%; margin-top: 3vh; display: flex; align-items: center; justify-content: center; margin-left:3vh;">
+                    <div class="col-lg-8 mb-4 order-0" style="background-color:white; height:80vh;border-radius: 10px;">
                         <!-- code here -->
-                            
+                        <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: red;width:30vh; height: 30vh;"></div> -->
+
+                        <div style="margin-top: -400px;">
+
+
+                            <div id="wire5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="wire5_line1" id="wire5_line1"></div>
+                                <div id="motor_png"><img height="120" src="motor.png" alt="" srcset=""></div>
+                            </div>
+
+                            <!-- wire 3 -->
+                            <div id="wire3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="battery_line1 b1"></div>
+                                <div class="battery_line22 b1"></div>
+                                <div class="battery_line33 b1"></div>
+                                <div class="battery_line44 b1"></div>
+                            </div>
+                            <!-- wire 4 -->
+                            <div id="wire4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="battery_line1 b2"></div>
+                                <div class="battery_line2 b2"></div>
+                                <div class="battery_line3 b2"></div>
+                                <div class="battery_line4 b2"></div>
+                            </div>
+
+
+                            <!-- wire 2 -->
+                            <div id="wire2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="wire2_line" id="wire2_line"></div>
+                            </div>
+                            <!-- switch1 -->
+                            <div id="switch1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div style="display: flex; align-items: center;" class="switch_cont" id="switch_cont">
+                                    <div class="firstLine1"></div>
+                                    <div class="middleLine1"></div>
+                                    <div class="firstLine1"></div>
+                                </div>
+                            </div>
+
+                            <!-- battery -->
+                            <div class="" id="battery_cont" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div id="battery_cont_js"
+                                    style="display: flex; flex-direction: column; align-items: center; position: relative; top: -17px;">
+                                    <div class="verticalLine1"></div>
+                                    <div class="horiLine1" style="height:3px;width: 35px;"></div>
+                                    <div class="horiLine1 mt-1" style="height:3.5px;width: 25px;"></div>
+                                    <div class="verticalLine2"></div>
+                                </div>
+                            </div>
+
+                            <!-- wire 1 -->
+                            <div id="wire1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="wireline1" id="wireline1"></div>
+                            </div>
+
+                            <!-- relay -->
+                            <div id="relay1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                <div class="relay_lin1 r1"></div>
+                                <div class="relay_box r1"></div>
+                                <div class="relay_lin2 r1"></div>
+                                <div class="relay_lin3 r1"></div>
+                                <div class="relay_lin4 r1"></div>
+                                <div class="relay_lin6 r1"></div>                                
+                                <div class="relay_lin5 r1"></div>
+                            </div>
+
+
+                        </div>
+
                     </div>
 
 
@@ -147,6 +229,9 @@
         </div>
     </div>
 
+
+
+    <script src="script.js"></script>
 
 
     <!-- Core JS -->
